@@ -1,0 +1,45 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#sobre-nos {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; 
+  height: 80vh;
+}
+
+.sobre-nos-texto h2 {
+  padding: 1em 0;
+  font-size: 2em;
+}
+
+.sobre-nos-texto {
+  flex-basis: 50%;
+  padding: 0px 3em;
+  color: white; 
+  font-family: "Poppins", sans-serif;
+}
+
+
+.sobre-nos-imagem {
+  flex-basis: 50%;
+  padding: 3em;
+}
+
+@media (max-width: 1024px) {
+  #sobre-nos {
+    flex-direction: column;
+  }
+
+  .sobre-nos-texto,
+  .sobre-nos-imagem {
+    flex-basis: 100%;
+    padding: 1em 0;
+    text-align: center;
+  }
+  .container {
+    margin: 3em;
+  }
+}

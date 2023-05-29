@@ -1,0 +1,242 @@
+.projetos {
+  color: #f1f1f1;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 140px 0px;
+}
+
+.projetos-titulo {
+  font-size: 40px;
+  font-weight: 700;
+  padding-bottom: 40px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 280px;
+  height: 280px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 16px;
+}
+
+.flip-card-front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(45deg, #1907b9, #000000);
+}
+
+.flip-card-back{
+  justify-content: space-around;
+}
+
+.flip-card-front img,
+.flip-card-back img {
+  margin-top: 1rem;
+  width: 40%;
+
+}
+
+.flip-card-back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-image: linear-gradient(315deg, #1907b9, #000000);
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+/* Nova Transportes ----------------------*/
+.imgBack.novatrans {
+  height: 55px;
+  width: auto;
+}
+.imgFront.novatrans {
+  padding-right: 30px;
+  height: auto;
+}
+
+/* Beltrão Advogados ----------------------*/
+.imgBack.beltrao {
+  height: 55px;
+  width: auto;
+}
+.imgFront.beltrao {
+  padding-right: 30px;
+  height: 5em;
+  width: auto;
+}
+
+.card-titulo {
+  font-family: "Poppins";
+  font-size: 24px;
+  font-weight: lighter;
+}
+
+.card-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-btn {
+  color: #f1f1f1;
+  padding: 5px 20px;
+  border: solid 0.3px #f1f1f1;
+  border-radius: 15px;
+  text-decoration: none;
+}
+
+.flip-card-back h3 {
+  margin-bottom: 0.3rem;
+}
+
+.projetos-container {
+  z-index: 0;
+}
+
+.projetos-cards {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-direction: column;
+}
+
+.conjunto {
+  display: flex;
+  gap: 50px;
+  flex-direction: row;
+}
+
+/*TEMPORÁRIO*/
+.img-emBreve {
+  width: 200px;
+  height: 200px;
+}
+
+/*Responsividade*/
+@media (min-width: 2000px) {
+  .flip-card {
+    width: 350px;
+    height: 350px;
+  }
+
+  .card-titulo {
+    font-size: 32px;
+  }
+
+  .card-btn {
+    padding: 10px 30px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .projetos-titulo {
+    font-size: 60px;
+  }
+
+}
+
+@media (max-width: 970px) {
+  .flip-card {
+    width: 260px;
+    height: 260px;
+  }
+
+  .projetos-cards {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 915px) {
+  .flip-card {
+    width: 240px;
+    height: 240px;
+  }
+
+  .conjunto {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 790px) {
+  .projetos {
+    font-size: 1em;
+    gap: 10px;
+    padding: 100px 0px;
+  }
+
+  .conjunto {
+    flex-direction: column;
+  }
+
+  .flip-card {
+    width: 30em;
+    height: 30em;
+  }
+
+  .imgBack-novatrans {
+    height: 30px;
+    width: 40px;
+  }
+  .imgFront-novatrans {
+    padding-right: 30px;
+    height: 140px;
+  }
+
+  .flip-card-front .img-emBreve, .flip-card-back .img-emBreve {
+    height: 120px;
+    width: 120px;
+  }
+
+  .card-titulo {
+    font-size: 22px;
+  }
+
+  .card-btn {
+    padding: 5px 10px;
+  }
+
+  .conjunto {
+    gap: 3em;
+  }
+
+  .flip-card-back{
+    font-size: 2em;
+  }
+}
+
+
+@media (max-width: 510px) {
+  .projetos-titulo {
+    font-size: 2em;
+  }
+}
