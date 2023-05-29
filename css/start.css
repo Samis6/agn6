@@ -1,0 +1,119 @@
+.pagina-inicial {
+  background-image: linear-gradient(to right bottom, #004a41, #00424a, #003853, #002d56, #001e4f, #081647, #0e0e3f, #130236, #0f0232, #0a022e, #060129, #020024);
+}
+
+.start {
+  display: flex;
+  align-items: center;
+  padding: 10em 4em 0em 4em;
+  justify-content: space-around;
+  font-family: "Poppins", sans-serif;
+  height: 40em;
+  box-sizing: border-box;
+}
+
+.start .start-titulo {
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+  color: #0EE6B7;
+  font-size: 50px;
+  line-height: 1.1;
+}
+
+.start .start-subtitulo {
+  font-family: "Poppins";
+  font-weight: 800;
+  color: white;
+  font-size: 40px;
+}
+
+.start .start-texto {
+  font-family: 'Fira Code', monospace;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  color: #f1f1f1;
+
+}
+
+.start .start-img {
+  height: 350px;
+  width: auto;
+  flex-basis: 40%;
+  user-drag: none;
+  -webkit-user-drag: none;
+}
+
+.start-info {
+  flex-basis: 40%;
+}
+
+.seta {
+  padding: 50px;
+  position: relative;
+  display: block;
+  text-align: center;
+  animation: flecha 0.7s infinite alternate ease-in-out;
+}
+
+.seta-img {
+  height: 30px;
+}
+
+/* Animação seta para proxima seção*/
+@keyframes flecha {
+  0% {
+    -webkit-transform: translateY(0);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(1em); 
+    opacity: 0.9;
+  }
+}
+
+
+/* Ajustes para Celular */
+@media (max-width: 480px) {
+  .start {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0em 2em;
+    height: 65vh;
+  }
+
+    .start .start-info {
+    flex-basis: auto;
+    width: 100%;
+    height: auto;
+    }
+
+    .start .start-img{
+      display: none;
+    }
+
+    .start .start-titulo, .start .start-subtitulo{
+      font-size: 2em;
+      padding: 0.2em 0em;
+    }
+
+}
+
+/*Ajustes para tablets*/
+@media (min-width: 481px) and (max-width: 1024px){
+  .start {
+    height: 80vh;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20em 2em;
+  }
+
+  .start .start-img,
+  .start .start-info {
+    flex-basis: auto;
+    width: 100%;
+    height: auto;
+    padding: 2em;
+  }
+
+
+}
